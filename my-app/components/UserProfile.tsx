@@ -1,6 +1,5 @@
 import { SSX } from '@spruceid/ssx';
 import { useEffect, useState } from 'react';
-import { useEnsAvatar, useEnsName } from 'wagmi'
 
 interface User {
     ssx: SSX,
@@ -17,7 +16,7 @@ const UserProfile = ({ ssx, ens }: User) => {
     // console.log(ensName)
     
     const returnEns = async () => {
-        console.log(address)
+        console.log(ens)
         const addAvatar = await ens.avatarUrl
         const addDomain = await ens.domain
         setAvatarUrl(addAvatar)
